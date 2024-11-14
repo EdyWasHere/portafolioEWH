@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* Estilos Globales */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.text {
+    margin-left: 6%;
+    padding: 3% 0 0 3%;
+    text-align: left;
+}
+
+.text h1,
+.text h2,
+.text h3,
+.text p {
+    margin: 0;
+    padding-left: 0;
+    color: #fff;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text h1 { font-size: 2em; font-weight: 800; }
+.text h2 { font-size: 5em; font-weight: 800; }
+.text h3 { font-size: 3em; font-weight: 700; }
+.text p  { font-size: 2em; font-weight: 800; }
+
+h2 {
+    color: rgb(58, 50, 50);
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.hovertown span {
+    transition: all 0.9s ease;
+}
+
+.hovertown span:hover {
+    text-shadow: 0 0 72px rgb(33, 34, 54);
+    color: transparent;
+    transition: all 0.2s ease;
+}
+
+@keyframes blackblur {
+    from { text-shadow: 0 0 72px rgb(39, 29, 29); color: transparent; }
+    to { text-shadow: 0; color: black; }
+}
+
+.smokemonster span {
+    animation: blackblur 2s 1 alternate;
+}
+.smokemonster span:nth-of-type(n+2) {
+    animation-delay: calc(0.1s * (n - 1));
+}
+
+@keyframes fun-1 {
+    from { text-shadow: 0 0 72px rgb(138, 68, 68); color: transparent; }
+    to { text-shadow: 0; color: rgb(36, 29, 29); }
+}
+
+.sparklemaster span {
+    animation: fun-1 2s 1 alternate;
+}
+.sparklemaster span:nth-of-type(n+2) {
+    animation-delay: calc(0.2s * (n - 1));
+}
+
+.textshadow .foreverblur {
+    text-shadow: 0 0 32px white;
+    color: transparent;
+}
+
+#jquerybuddy span {
+    text-shadow: 0 0 4px rgba(0,100,0,1);
+    color: transparent;
+}
+
+section {
+    padding: 10px 100px;
+    text-align: center;
+}
+
+section:nth-child(odd) { background: #eee; }
+section:nth-child(even) { background: #333; }

@@ -1,0 +1,249 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* Configuración básica */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(2,0,36);
+    background: linear-gradient(18deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 26%, rgba(0,212,255,1) 100%);
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor de fondo */
+.background-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.containerTitulo {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Barra lateral */
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: -30%;
+}
+
+/* Estilos de encabezado */
+#header {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+#header-toggle {
+    color: rgb(146, 150, 150);
+}
+
+/* Wrapper */
+.wrapper {
+    position: relative;
+    background-image: url(../icon/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 40;
+}
+
+.opacity {
+    background: rgba(79, 70, 62, 0.5);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+/* Estilo del modal */
+.modal, .modalBarra {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content, .modalBarra {
+    background-color: #7B868C;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #D9D9D9;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px #7B868C;
+    text-align: center;
+}
+
+.modal-content .button-container, .modal-content .button-cita, .modalBarra {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-content button, .modalBarra-header .btn-close {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: #0a1f8f;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover, .modalBarra-header .btn-close:hover {
+    background-color: #7B868C;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos específicos de elementos */
+.identificaciones-div {
+    display: flex;
+    justify-content: start;
+}
+
+.img-id {
+    height: auto;
+    max-height: 200px;
+    margin: 10px;
+}
+
+.gravity {
+    width: 100%;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.gravity .logo {
+    position: relative;
+    right: 45%;
+    width: 80%;
+}
+
+.gravity h1 {
+    color: #d0d0d0;
+    font-size: 23px;
+    font-weight: 600;
+    padding-top: 90px;
+}
+
+/* Estilos del contador */
+.countdown .back-text h4 {
+    color: red;
+    background: red;
+}
+
+#countdown {
+    margin-top: 75px;
+}
+
+.Mensaje_Mantenimiento {
+    text-align: center;
+    padding-top: 120px;
+    z-index: 100;
+}
+
+.Mensaje_Mantenimiento h1 {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 20px 0 50px;
+}
+
+/* Estilos de búsqueda */
+.buscar-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.buscar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buscar-form input[type="text"], .buscar-form button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.buscar-form button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.buscar-form button:hover {
+    background-color: #0056b3;
+}
+
+.resultados-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.resultado-item {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.resultado-item img {
+    max-width: 100px;
+    margin-top: 10px;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+    .buscar-form {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .buscar-form input[type="text"] {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .buscar-container {
+        padding: 15px;
+    }
+
+    .buscar-form input[type="text"],
+    .buscar-form button {
+        font-size: 14px;
+    }
+}
